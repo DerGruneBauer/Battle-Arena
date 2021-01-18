@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Battle Arena</title>
+  </head>
+  <body onload="getMessage()">
+    <div class="messageWrapper">
+      <div class="initialMessage"></div>
+    </div>
+    <div class="battleArenaWrapper">
+      <div class="title">BATTLE ARENA</div>
+      <div class="statsButtonMessage">
+        <div class="stats">
+          <p>Panic Level:<span class="panicLevel"> 10</span></p>
+          <p>Stamina Level:<span class="staminaLevel"> 10</span></p>
+          <p>Enemy's Hit Points:<span class="enemyHitPoints"> 10</span></p>
+          <p>
+            You have <span class="moveCounter">10</span
+            ><span class="movePlural"> moves</span> remaining.
+          </p>
+        </div>
+        <button title="Roll or die!" onclick="diceRoll()">• • • • • •</button>
+        <div class="message"></div>
+      </div>
+      <div class="enemyPic"></div>
+      <div class="userPic"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

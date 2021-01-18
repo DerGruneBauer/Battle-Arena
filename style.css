@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.battleArenaWrapper {
+    margin: 50px 50px 0 50px;
+    border: solid gray 7px;
+    border-radius: 10px;
+    background-color: white;
+    display: none;
+}
+
+.messageWrapper {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.initialMessage, .dreamMessage {
+    color: white;
+    border-right: solid white 2px;
+    margin: 0 auto;
+    animation: 
+        initialMessage 1.5s steps(10, end),
+        borderRight .5s step-end infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes initialMessage {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes borderRight {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+.title {
+    margin: 30px 0 20px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.statsButtonMessage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stats {
+    font-size: 15px;
+    width: 30vw;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0 10px 20px;
+}
+
+.moveCounter, .panicLevel, .staminaLevel, .enemyHitPoints{
+    color: red;
+}
+
+.message {
+    text-align: center;
+    width: 40vw;
+    margin-right: 20px;
+}
+
+.userPic, .enemyPic{
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.userPic {
+    left: 30%;
+    background-image: url('./assets/sprites.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: user;
+    animation-duration: 2s;
+}
+
+@keyframes user {
+  0%   {left: 0px;}
+  25%  {left: 30%; }
+  50%  {left: 30%; }
+  75%  {left: 30%; }
+  100% {left: 30%; }
+}
+
+.enemyPic {
+    left: 50%;
+    background-image: url('./assets/Monster\ 2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: enemy;
+    animation-duration: 2s;
+}
+
+@keyframes enemy {
+    0%   {left: 20%; }
+    25%  {left: 50%; }
+    50%  {left: 50%; }
+    75%  {left: 50%; }
+    100% {left: 50%; }
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    font-size: 22px;
+    border-radius: 5px;
+    border: solid 3px black;
+    background-color: ghostwhite;
+}
+
+button:hover {
+    cursor: pointer;
+}
