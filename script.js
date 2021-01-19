@@ -33,7 +33,7 @@ const getThirdMessage = () => {
 
 const diceRoll = () => {
   //die roll loops
-  let dieNumber = Math.floor(Math.random() * 5);
+  let dieNumber = Math.floor(Math.random() * 6);
 
   if (dieNumber == 0) {
     message.innerText = `You have rolled a 1. You have been hit and you begin to panic.`;
